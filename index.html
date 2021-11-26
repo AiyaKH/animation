@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Anim 1</title>
+    <style media="screen">
+      div {
+        margin: 40px;
+        width: 50px;
+        height: 80px;
+        border-radius: 30%;
+        background: green;
+        position: relative;
+        }
+
+      .re1 {
+        -webkit-animation: pulsing 2s infinite;
+        animation: pulsing 2s infinite;
+        }
+
+      .re2{
+        animation-duration: 3s;
+        animation: slidein 3s infinite;
+        }
+
+      .re3 {
+        animation-name: re3;
+        animation-duration: 2s;
+        animation-timing-function: ease-out;
+        animation-direction: alternate;
+        animation-delay: 2s;
+        animation-iteration-count: infinite;
+        }
+
+        .re4 {
+          animation-name: re4;
+          animation-duration: 2s;
+          animation-timing-function: ease-out;
+          animation-direction: relative;
+          animation-delay: 2s;
+          animation-iteration-count: infinite;
+          }
+
+        .re5 {
+          width: 100px;
+          height: 100px;
+          background-color: red;
+          position: relative;
+          animation-name: re5;
+          animation-duration: 4s;
+          animation-delay: 2s;
+          animation-iteration-count: infinite;
+        }
+      @-webkit-keyframes pulsing {
+        0% {
+          -webkit-transform: scale(0.5, 0.5);
+          transform: scale(0.5, 0.5)
+        }
+        50% {
+          -webkit-transform: scale(1.0, 1.0);
+          transform: scale(1.0, 1.0);
+        }
+        100% {
+          -webkit-transform: scale(0.5, 0.5);
+          transform: scale(0.5, 0.5);
+        }
+      }
+
+      @keyframes pulsing {
+        0% {
+          -webkit-transform: scale(0.5, 0.5);
+          transform: scale(0.5, 0.5)
+        }
+        50% {
+          -webkit-transform: scale(1.0, 1.0);
+          transform: scale(1.0, 1.0);
+        }
+        100% {
+          -webkit-transform: scale(0.5, 0.5);
+          transform: scale(0.5, 0.5);
+        }
+      }
+
+      @keyframes slidein {
+        from {
+          margin-left: 50%;
+          width: 150%;
+      }
+
+        to {
+          margin-left: 0%;
+          width: 6%;
+        }
+      }
+
+      @keyframes re3 {
+        from {
+          background-color: red;
+        }
+        to {
+          background-color: yellow;
+        }
+      }
+
+      @keyframes re4 {
+        0%   {background-color:green; left:0px; top:0px;}
+        50%  {background-color:yellow; left:200px; top:0px;}
+        75%  {background-color:blue; left:200px; top:80px;}
+        100% {{background-color:green; left:0px; top:0px;}}
+      }
+      @keyframes re5 {
+        0%   {background-color:red; left:0px; top:0px;}
+        50%  {background-color:yellow; left:200px; top:0px;}
+        75%  {background-color:blue; left:200px; top:80px;}
+        100%  {background-color:green; left:0px; top:0px;}
+      }
+    </style>
+  </head>
+  <body>
+     <div class="re1"></div>
+     <div class="re2"></div>
+     <div class="re3"></div>
+     <div class="re4"></div>
+     <div class="re5"></div>
+  </body>
+</html>
